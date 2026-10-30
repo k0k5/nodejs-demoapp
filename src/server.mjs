@@ -54,7 +54,7 @@ const sessionConfig = {
 if (process.env.REDIS_SESSION_HOST) {
   const redisClient = createRedisClient({ url: `redis://${process.env.REDIS_SESSION_HOST}` })
 
-  redisClient.connect().catch((e
+  redisClient.connect().catch((err) => {
     console.error('### 🚨 Redis session store error:', err.message)
     process.exit(1)
   })
