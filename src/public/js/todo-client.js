@@ -4,7 +4,7 @@
 let todos = []
 
 async function loadAllTodos() {
-  const resp = await fetch('/api/todo')
+  const resp = await fetch('/api/todo'
   if (resp.ok) {
     todos = await resp.json()
     for (const todo of todos) {
